@@ -1,5 +1,8 @@
 services:
   mysql:
+    build:
+      context: ./database
+      dockerfile: Dockerfile
     container_name: myelga-mysql
     image: mysql:8.4
     restart: unless-stopped
